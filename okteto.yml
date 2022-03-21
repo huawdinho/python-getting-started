@@ -1,6 +1,5 @@
-name: hello-world
+name: lambda-world
 command: bash
-autocreate: true
 sync:
 - .:/usr/src/app
 forward:

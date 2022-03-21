@@ -12,10 +12,11 @@
   okteto init
   okteto up 
 
-  npm i 
-  npm i -g nodemon
-  npm run start 
-
+  python app.py
+  
+  apt-get update
+  apt-get install curl
+  apt-get install unzip
 
   kubectl apply -f k8s.yml
   
@@ -33,6 +34,8 @@
   export AWS_ACCESS_KEY_ID=XXXXXXXXXXXXXXXXXXXX
   export AWS_SECRET_ACCESS_KEY=yyyyyyyxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   
-  aws configure
+  cd lambda.py
+  sam build 
+  sam deploy
 
 ```
