@@ -1,27 +1,13 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: hello-world
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: hello-world
-  template:
-    metadata:
-      labels:
-        app: hello-world
-    spec:
-      containers:
-      - image: okteto/hello-world:python
-        name: hello-world
-
----
-
 apiVersion: v1
-kind: Service
+kind: Pod
 metadata:
   name: hello-world
-  annotations:
-    dev.okteto.com/auto-ingress: "true"
-command: lscpu
+spec:  # specification of the pod’s contents
+  restartPolicy: Never
+  containers:
+  - name: hello
+    image: "ubuntu:14.04"
+    env:
+    - name: MESSAGE
+      value: "hello world"
+    command: ["lscpu"]
