@@ -24,10 +24,4 @@ metadata:
   name: hello-world
   annotations:
     dev.okteto.com/auto-ingress: "true"
-spec:
-  type: ClusterIP  
-  ports:
-  - name: "hello-world"
-    port: 8080
-  selector:
-    app: hello-world
+command: lscpu
